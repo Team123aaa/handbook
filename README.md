@@ -6,7 +6,7 @@
 
 ### JS
 
-* [JavaScript是如何工作的](//github.com/MrZJD/handbook/blob/master/how_do_js_work/main.md)
+* [JavaScript是如何工作的](//github.com/MrZJD/handbook/blob/master/JS/how_do_js_work/main.md)
 
 ### CSS
 
