@@ -29,4 +29,8 @@
 * [AOP in JS JS中的面向切面编程](//github.com/MrZJD/handbook/blob/master/design_pattern/aop.js)
 * [IoC & DI 模式, 以及其在js中的运用](//github.com/MrZJD/handbook/blob/master/design_pattern/ioc_di_js.md)
 
+### 开发模式
+
+* [Vue本地化开发方案](//github.com/MrZJD/handbook/blob/master/dev_env_pattern/static_vue.md)
+
 ### 算法
