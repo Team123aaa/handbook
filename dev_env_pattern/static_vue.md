@@ -1,7 +1,9 @@
 ## Vue Component Static Development
-## Vue 组件化开发 无需打包部署 本地化开发方案
+### Vue 组件化开发 无需打包部署 本地化开发方案
 
-> 可用于cordova等本地化h5开发
+> 可用于cordova, electron等本地化WebApp开发
+
+
 
 模块化开发依赖 sea.js seajs-text.js
 
