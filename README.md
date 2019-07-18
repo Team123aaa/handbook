@@ -36,3 +36,5 @@
 * [Vue本地化开发方案](//github.com/MrZJD/handbook/blob/master/dev_env_pattern/static_vue.md)
 
 ### 算法
+
+* [生命游戏](//github.com/MrZJD/handbook/blob/master/algorithm/game_of_life.html)
