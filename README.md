@@ -11,10 +11,12 @@
 ### CSS
 
 * [CSS 代码命名及组织规范: BEM OOCSS SMACSS ACSS](//github.com/MrZJD/handbook/blob/master/CSS/CSSRules/README.md)
+* [【效果】多边形](//github.com/MrZJD/handbook/blob/master/CSS/angle.html)
 
 ### HTML(DOM/BOM/WEB API/Browser)
 
 * [PWA & ServiceWorker 渐进式Web应用 及 SW离线缓存，workbox 介绍](//github.com/MrZJD/handbook/blob/master/web/pwa_sw/)
+* [canvas fingerprinting | fill mode](//github.com/MrZJD/handbook/blob/master/web/canvas_fingerprinting)
 
 ### HTTP
 
