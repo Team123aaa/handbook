@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas Fill Rule - nonzero | evenodd</title>
+    <style>
+        canvas {
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const panel = document.createElement('canvas')
+        panel.width = 200
+        panel.height = 200
+        panel.style.display = 'inline'
+
+        document.body.appendChild(panel)
+
+        const ctx = panel.getContext('2d')
+
+        // * nonzero 非零环绕原则
+        // 区域中任意一点 向外引出一条射线 与顺时针路径相交+1 与逆时针路劲相交-1 => 最终值非0 即在fill区域内
+        ctx.fillStyle = '#f60'
+        ctx.beginPath()
+        ctx.rect(0, 0, 10, 10)
+        ctx.rect(2, 2, 6, 6)
+        ctx.closePath()
+        ctx.fill()
+        console.log(ctx.isPointInPath(5, 5)) // true
+        console.log(ctx.isPointInPath(1, 1)) // true
+
+        ctx.beginPath()
+        ctx.moveTo(0, 12, 10, 10)
+        ctx.lineTo(10, 12) // 顺时针
+        ctx.lineTo(10, 22)
+        ctx.lineTo(0, 22)
+        ctx.lineTo(0, 12)
+
+        ctx.moveTo(2, 14) // 逆时针
+        ctx.lineTo(2, 20)
+        ctx.lineTo(8, 20)
+        ctx.lineTo(8, 14)
+        ctx.lineTo(2, 14)
+        ctx.closePath()
+        ctx.fill()
+
+        // * evenodd 奇偶原则
+        // 区域中任意一点 向外引出一条射线 相交线 个数 => 奇数填充 / 偶数不填充
+        ctx.beginPath()
+        ctx.fillStyle = '#6f0'
+        ctx.rect(12, 0, 10, 10)
+        ctx.rect(14, 2, 6, 6)
+        ctx.closePath()
+        ctx.fill('evenodd')
+    </script>
+</body>
+</html>
