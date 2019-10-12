@@ -7,6 +7,7 @@
 ### JS
 
 * [JavaScript是如何工作的](//github.com/MrZJD/handbook/blob/master/JS/how_do_js_work/main.md)
+* [深入理解Node.js 进程与线程](//github.com/MrZJD/handbook/blob/master/JS/process_thread)
 
 ### CSS
 
@@ -40,3 +41,7 @@
 ### 算法
 
 * [生命游戏](//github.com/MrZJD/handbook/blob/master/algorithm/game_of_life.html)
+
+### Science 其他科学/工程知识
+
+* [一维码 & 二维码](//github.com/MrZJD/handbook/blob/master/science/code/code.md)

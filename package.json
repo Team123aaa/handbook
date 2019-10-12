@@ -1,0 +1,18 @@
+{
+  "name": "handbook",
+  "version": "1.0.0",
+  "description": "> 用于收集总结日常，常用代码片段，实现某个功能的思路，以及收藏的博文链接等。",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrZJD/handbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrZJD/handbook/issues"
+  },
+  "homepage": "https://github.com/MrZJD/handbook#readme",
+  "dependencies": {}
+}
