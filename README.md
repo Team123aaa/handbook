@@ -21,6 +21,8 @@
 
 ### HTTP
 
+* [WebSocket 编解码](//github.com/MrZJD/handbook/blob/master/JS/chatapp/README.md)
+
 ### NODEJS
 
 ### FrontEnd Based
