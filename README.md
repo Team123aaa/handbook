@@ -4,7 +4,7 @@
 
 ## Contents
 
-### JS
+### JS / NodeJS
 
 * [JavaScript是如何工作的](//github.com/MrZJD/handbook/blob/master/JS/how_do_js_work/main.md)
 * [深入理解Node.js 进程与线程](//github.com/MrZJD/handbook/blob/master/JS/process_thread)
@@ -21,9 +21,7 @@
 
 ### HTTP
 
-* [WebSocket 编解码](//github.com/MrZJD/handbook/blob/master/JS/chatapp/README.md)
-
-### NODEJS
+* [WebSocket 编解码](//github.com/MrZJD/handbook/blob/master/JS/chatapp/)
 
 ### FrontEnd Based
 
