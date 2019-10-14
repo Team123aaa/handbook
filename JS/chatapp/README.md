@@ -1,5 +1,3 @@
-## Talk is Cheap, Show me the code!
-
 ## WebSocket
 
 浏览器WWW的主要协议为http/https协议，而http协议是无状态的。在一次请求中数据传输只有一次。所有当我们需要处理实时性的需求时，通常会有一些hack方案: 如ajax polling轮询; http 长连接; 这些方案虽然都可以完成需求，但是处理起来不仅复杂而且浪费了许多不必要的网络资源等。
@@ -232,9 +230,11 @@ Socket.io都实现的通信机制：
 * [Github - /socketio/socket.io/](https://github.com/socketio/socket.io/)
 * [socket.io - 官方文档](https://socket.io/)
 * [cnode - socket.io入门整理](https://cnodejs.org/topic/50a1fcc7637ffa4155b5a264)
-<br/>
+
+
 * [MSN - WebSocket](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket)
 * [cnblogs - WebSocket数据包协议详解](https://www.cnblogs.com/smark/archive/2012/11/26/2789812.html)
 * [WebSocket协议详解](http://www.voidcn.com/article/p-sdgtzxzy-cc.html)
-<br/>
+
+
 * [知乎 - WebSocket 是什么原理？为什么可以实现持久连接？](https://www.zhihu.com/question/20215561)
