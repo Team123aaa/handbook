@@ -53,7 +53,6 @@ template => vue => render(h => h())
 **参考**
 
 - [关于template编译 - Vue生命周期](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
-
 - [Vue.compile](https://cn.vuejs.org/v2/api/#Vue-compile)
 
 <br/>
@@ -305,9 +304,13 @@ React自带没有Vue中的动态组件keep-alive，可根据业务需要自行�
 
 > 其他生态内容各有共通之处，并且可相互交叉使用。所以这里不讨论了，以后单独写一篇各种数据管理的方案。
 
+<br/>
+
 ### 结语
 
 总的来说，两者各有异同点。编写方式见仁见智。
+
+<br/>
 
 ### 参考
 
