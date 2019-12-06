@@ -284,7 +284,7 @@ const Counter = enhance(({ counter, setCounter }) => (
 
 **为什么React不需要 `filter` `computed`**
 
-> filter 过滤器 => 通常依赖一个状态 常见于格式化文本
+> filter 过滤器 => 通常依赖一个状态 常见于格式化文本 <br/>
 > computed 计算值 => 可依赖多个状态，生成一个加工后的状态值 (computed的存在便于我们将基础状态原子化，含义分层更清晰)
 
 React都可以通过函数的形式根据state生成。甚至于两者无需严格区分，state => fn => ui。这样函数式思维的表达更清晰统一。
