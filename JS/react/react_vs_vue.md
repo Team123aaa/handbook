@@ -5,6 +5,8 @@
 
 下面简单对比一下两者的差异，以及使用中各自不同的关注点。观点不建议作为任何技术选型的依据。
 
+<br/>
+<br/>
 
 ### 1. React是先驱者，Vue站在巨人的肩膀上看的更高。
 ---
@@ -18,13 +20,15 @@
 
 React的关键词：_jsx_ _all-in-js_ _immutable_
 
-Vue的关键词：_observer_ _directive_
+Vue的关键词：_observer_ _directive_ _SFC_
 
+<br/>
+<br/>
 
 ### 2. JSX 与 模板语法
 ---
 
-通常Vue的开发将模板与js逻辑分开编写(尽快vue文件将template style script进行了组合)，在底层实现上 是将模板编译成虚拟DOM渲染函数。所以直接编写render渲染函数 或者 JSX 也是可以的。
+通常Vue的开发将模板与js逻辑分开编写(尽管vue文件将template style script进行了组合)，在底层实现上 是将模板编译成虚拟DOM渲染函数。所以直接编写render渲染函数 或者 JSX 也是可以的。
 
 这一点Vue(template/jsx)和React(jsx)都通过不同的方式将UI转变成了虚拟DOM渲染函数。
 
@@ -35,21 +39,27 @@ template => vue => render(h => h())
 那么问题来了，**Vue多了一层模板编译，是否会影响效率性能？**
 
 1. 首先明确问题，多了一层模板编译，模板编译这一块儿的工作是什么？由谁处理的？
+ 
     > 模板编译 指的是 template字符串 => render渲染函数 <br/>
     > [jsx => render] 是由babel在前端代码构建时完成转化 <br/>
     > [vue component template (单组件) => render] 由webpack(vue-loader)在前端代码构建时完成转化 <br/>
     > [vue html template / vue template属性 (模板字符串) => render] 由Vue.compile(template)生成
+
 2. 结论：显而易见，使用Vue模板字符串，多了一个运行时的编译过程，会影响首次运行效率。
-
-[关于template编译 - Vue生命周期](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
-
-[Vue.compile](https://cn.vuejs.org/v2/api/#Vue-compile)
 
 两者的优缺点：
 
 * JSX更加灵活，all-in-js的写法见人见智。
 * template可以自定义filter/directive等，基于模板语法复用逻辑。（JSX可以通过函数复用，这将在React的函数式思维中说明）
 
+**参考**
+
+- [关于template编译 - Vue生命周期](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
+
+- [Vue.compile](https://cn.vuejs.org/v2/api/#Vue-compile)
+
+<br/>
+<br/>
 
 ### 3. 响应式UI & Virtual-DOM
 ---
@@ -57,7 +67,7 @@ template => vue => render(h => h())
 响应式UI：view-model(vm) => view
 
 > 三大框架(react, vue, angular)的响应式方式各有不同，这也是影响各框架性能的主要因素。<br/>
-> Virtual-DOM 是为了减少不必要的DOM操作 以提高性浏览器reflow/repaint性能
+> Virtual-DOM 是为了减少不必要的DOM操作 以提高浏览器reflow/repaint性能
 
 - `React => this.setState & vdom`
 - `Vue => (es5)Object.defineProperty/(es6)Proxy & vdom`
@@ -69,6 +79,7 @@ template => vue => render(h => h())
 // vue
 this.todo = [1,2,3] // todo会同步更新，但是ui更新是异步批量更新的
 this.$nextTick(() => { /* ui 已更新 */ })
+
 // react
 this.setState({ // state.todo和ui更新为异步更新
     todo: [1, 2, 3]
@@ -139,10 +150,13 @@ this.setState(state => {
 })
 ```
 
-[不可思议的React Diff](https://zhuanlan.zhihu.com/p/20346379)
+**扩展问题**
 
-[长列表优化](https://segmentfault.com/a/1190000017233625)
+- [不可思议的React Diff](https://zhuanlan.zhihu.com/p/20346379)
+- [长列表优化](https://segmentfault.com/a/1190000017233625)
 
+<br/>
+<br/>
 
 ### 4. 组件化 与 React的函数式思维
 ---
@@ -150,6 +164,8 @@ this.setState(state => {
 > 组件化，是现代前端框架的基本功能。目的是拆分功能区域，复用结构和逻辑，降低构建大型应用的复杂度难度。但是组件化也带来了新的问题，就是数据流动的问题。
 
 > 函数式编程，即强调函数是first class。可以通过传递函数来实现，高阶函数，闭包。最大好处就是(纯)函数的结果只依赖输入的参数，即没有副作用。这样就有利用监控数据流动。（当然了，jsx中还依赖大量纯函数来生成ui）
+
+<br/>
 
 **组件间的通讯(基本情况)**
 
@@ -190,6 +206,8 @@ class ToDoItem {
 
 上面的例子可以看到，react没有多余的api，可以将函数通过props形式直接传递给子组件。
 
+<br/>
+
 **组件的嵌套**
 
 ```jsx
@@ -209,6 +227,8 @@ class ToDoItem {
     { this.props.children }
 </div>
 ```
+
+<br/>
 
 **细说React组件：class component / pure component / functional component / HOC**
 
@@ -263,13 +283,17 @@ const Counter = enhance(({ counter, setCounter }) => (
 1. 组件应优先使用PureComponent提高渲染效率。
 2. 将容器组件和展示组件分离。
 3. 重复的逻辑应该通过高阶函数的方式工厂化。
+   
+<br/>
 
-**为什么React不需要filter computed**
+**为什么React不需要 `filter` `computed`**
 
 > filter 过滤器 => 通常依赖一个状态 常见于格式化文本
 > computed 计算值 => 可依赖多个状态，生成一个加工后的状态值 (computed的存在便于我们将基础状态原子化，含义分层更清晰)
 
 React都可以通过函数的形式根据state生成。甚至于两者无需严格区分，state => fn => ui。这样函数式思维的表达更清晰统一。
+
+<br/>
 
 **keep-alive 动态组件**
 
@@ -277,7 +301,7 @@ React自带没有Vue中的动态组件keep-alive，可根据业务需要自行�
 
 ### 5. 数据管理方案 Router SSR等
 
-> 其他生态内容各有借鉴共同之处，并且可相互交叉使用。所以这里不讨论了，以后单独写一篇各种数据管理的方案。
+> 其他生态内容各有共通之处，并且可相互交叉使用。所以这里不讨论了，以后单独写一篇各种数据管理的方案。
 
 ### 结语
 
