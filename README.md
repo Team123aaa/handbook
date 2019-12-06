@@ -8,6 +8,8 @@
 
 * [JavaScript是如何工作的](//github.com/MrZJD/handbook/blob/master/JS/how_do_js_work/main.md)
 * [深入理解Node.js 进程与线程](//github.com/MrZJD/handbook/blob/master/JS/process_thread)
+* [TypedArray & DataView](//github.com/MrZJD/handbook/blob/master/JS/TypedArray/main.md)
+* [React 与 Vue 分析](//github.com/MrZJD/handbook/blob/master/JS/react/react_vs_vue.md)
 
 ### CSS
 
@@ -45,3 +47,8 @@
 ### Science 其他科学/工程知识
 
 * [一维码 & 二维码](//github.com/MrZJD/handbook/blob/master/science/code/code.md)
+* [PNG 编解码](//github.com/MrZJD/handbook/blob/master/science/png/png.md)
+
+### 工具
+
+* [vim](//github.com/MrZJD/handbook/blob/master/tools/vim/vim.md)
