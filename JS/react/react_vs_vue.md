@@ -1,5 +1,5 @@
 ## React 与 Vue
----
+
 
 个人Vue和React都使用过一段时间，并在实际项目中应用。最初是使用Vue开发，原因也比较简单，找工作需要。转向React，首先是个人比较喜欢all-in-js的统一写法，第二个react靠函数式理念使代码写起来更加灵活。
 
@@ -8,7 +8,7 @@
 <br/>
 
 ### 1. React是先驱者，Vue站在巨人的肩膀上看的更高。
----
+
 
 现代化前端框架有着统一的目标：抛弃传统jQuery式的开发，最小化dom修改以提高性能，将ui与状态分离从而构建大型前端富应用。
 
@@ -24,7 +24,7 @@ Vue的关键词：_observer_ _directive_ _SFC_
 <br/>
 
 ### 2. JSX 与 模板语法
----
+
 
 通常Vue的开发将模板与js逻辑分开编写(尽管vue文件将template style script进行了组合)，在底层实现上 是将模板编译成虚拟DOM渲染函数。所以直接编写render渲染函数 或者 JSX 也是可以的。
 
@@ -59,7 +59,7 @@ template => vue => render(h => h())
 <br/>
 
 ### 3. 响应式UI & Virtual-DOM
----
+
 
 响应式UI：view-model(vm) => view
 
@@ -83,10 +83,14 @@ this.setState({ // state.todo和ui更新为异步更新
 }, () => { /* ui state已更新 */ })
 ```
 
+<br/>
+
 **Object.defineProperty的局限性**
 
 * 无法检测到对象属性的新增和删除
 * 部分数组操作无法检测 `vm.items[i] = newValue` `vm.items.length = newlen` —— `Vue数组的异变方法`
+
+<br/>
 
 **Immutable.js的优势**
 
@@ -155,7 +159,7 @@ this.setState(state => {
 <br/>
 
 ### 4. 组件化 与 React的函数式思维
----
+
 
 > 组件化，是现代前端框架的基本功能。目的是拆分功能区域，复用结构和逻辑，降低构建大型应用的复杂度难度。但是组件化也带来了新的问题，就是数据流动的问题。
 
